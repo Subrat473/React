@@ -1,0 +1,25 @@
+{
+  "name": "y",
+  "version": "1.0.0",
+  "description": "this is starting of react ",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Subrat473/React.git"
+  },
+  "keywords": [
+    "React"
+  ],
+  "author": "subrat",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Subrat473/React/issues"
+  },
+  "homepage": "https://github.com/Subrat473/React#readme",
+  "devDependencies": {
+    "parcel": "^2.13.3"
+  }
+}
