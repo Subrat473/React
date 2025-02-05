@@ -4,6 +4,8 @@
   "description": "this is starting of react ",
   "main": "app.js",
   "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
     "test": "jest "
   },
   "repository": {
@@ -21,5 +23,12 @@
   "homepage": "https://github.com/Subrat473/React#readme",
   "devDependencies": {
     "parcel": "^2.13.3"
-  }
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "browserslist": [
+    "Last 2 versions"
+  ]
 }
