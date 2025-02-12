@@ -2,6 +2,7 @@ import RestaurantCard from "./RestaurantCard";
 import { useState, useEffect } from "react";
 import resList from "../utils/mockData";
 
+
 const Body = () => {
     // Local State Variable
     const [listOfRestaurants, setListOfRestaurants] = useState(resList);
