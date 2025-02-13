@@ -22,7 +22,7 @@ const Header = () => {
 
     return (
         <div className="flex justify bg-pink-100"
-    )
+    
 
 
 
