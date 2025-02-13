@@ -1,4 +1,4 @@
-import React from "react";
+import React, { lazy, useEffect } from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css"; 
 import Header from "./components/Header";
@@ -9,7 +9,8 @@ import Error from "./components/Error";
 import RestaurantMenu from "./components/RestaurantMenu";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import UserContext from "./Utils/UserContext";
-
+import { Provider } from "react-redux";
+import appStore from "./Utils/appStore";
 
 
 
@@ -31,6 +32,39 @@ import UserContext from "./Utils/UserContext";
  * - Contacts
  * - Address 
  */
+
+const Grocery = lazy([] => import("./components/Grocery"));
+
+
+const About = lazy([] => import("./components/About"));
+
+
+const AppLayout = () => {
+    const [userName, setUserName] = useState();
+   
+    
+
+    // authentication
+
+    useEffect (() => {
+        // Make an API call and send username and password
+        const data = {
+        name: "Akshay Saini",
+    };
+setUserName(data.name);
+}, []);
+
+return (
+    <Provider store={appStore}>
+        <UserContext.Provider value = {{ loggedInUser: userName, setUserName }}>
+            <div className="app">
+                <header />
+                <Outlet />
+            </div>
+        </UserContext.Provider>
+    </Provider>
+);
+};
 
 
 const RestaurantCard = (props) => {
