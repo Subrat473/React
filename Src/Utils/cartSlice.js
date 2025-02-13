@@ -7,14 +7,19 @@ const cartSlice = createSlice({
     },
     reducers: {
         addItem: (state, action) =>{
-            // mutating the state here
+            // Redux Toolkit uses inner BTS
             state.items.push(action.payload);
         },
-        removeItem: (state) =>{
+        removeItem: (state, action) =>{
             state.items.pop();
         },
-        clearCart: (state) => {
-            state.items.length =0;
+        // originalState = ["pizza"]
+        clearCart: (state, action) => {
+            console.log(state); // [pizza]
+            state = [];
+            console.log(state); // []
+            
+            
         },
 
     },

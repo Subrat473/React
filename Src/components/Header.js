@@ -1,24 +1,34 @@
+import { LOGO_URL } from "../utails/components";
+import { useState, useContext } from "react";
+import { Link } from "react-router-dom";
+import useOnLineStatus from "../Utils/useonlinestatus";
+import UserContext from "../Utils/UserContext";
+import { useSelector } from "react-redux";
+
 
 const Header = () => {
-    return (
-        <div className="header">
-            <div className="logo-container">
-                <img 
-                    className="logo"
-                    src="https://imgs.search.brave.com/94tz_tBRybAoae6CfyBAUCJYOXOiXaYpyelmhFXyh8U/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/cHJlbWl1bS1waG90/by9idXJnZXItY29u/Y2VwdF80NDU5ODMt/NTMwLmpwZz9zZW10/PWFpc19oeWJyaWQ"
-                    alt="Logo"
-                />
-            </div>
-            <div className="nav-items">
-                <ul> 
-                    <li>Home</li>
-                    <li>About us</li>
-                    <li>Contact us</li>
-                    <li>Cart</li>
-                </ul>
-            </div>
-        </div>
-    );
-};
+    const [btnNameReact, setBtnReact] = useState("Login");
 
-export default Header;
+    const onlinestatus = useOnLineStatus();
+
+    const {loggedInUser } = useContext(UserContext);
+    console.log(loggedInUser);
+    
+
+    // Subscribing to the stoe using selector 
+
+    const cartitms = useSelector((store) => store.cart.item);
+
+
+    return (
+        <div className="flex justify bg-pink-100"
+    )
+
+
+
+
+
+
+
+
+}
